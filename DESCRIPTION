@@ -1,0 +1,27 @@
+Package: EasyWeatherR
+Type: Package
+Title: Manipulate and Visualise Data from an EasyWeather Weather Station
+Version: 0.1.0
+Author: Clare Lindeque
+Maintainer: Clare Lindeque <clarelindeque@gmail.com>
+Description: The EasyWeatherR package loads, manipulates and plots data
+        retrieved from AmbientWeather weather stations running the HP2000
+        software. This data is available from the weather station console in
+        csv format, with a date column and 20 standard columns of data. Weather
+        stations that do not contain a particular sensor will not report all 
+        data types but will contain "--" or some other indicator of missing
+        data in those columns. The standard columns are, in addition to a 
+        column number and a Date/Time stamp, as follows:
+        Indoor Temperature (°C),	Indoor Humidity (%),	Outdoor Temperature
+        (°C),	Outdoor Humidity (%),	Wind (km/h),	Gust (km/h),	Dew Point (°C),	
+        Wind Chill (°C),	Wind Direction (°),	ABS Barometer (hpa),	REL 
+        Barometer (hpa)	Rain Rate (mm/h)	Daily Rain (mm)	Weekly Rain (mm),	
+        Monthly Rain (mm),	Yearly Rain (mm),	Solar Rad. (w/<U+33A1>),	Heat index (°C),
+        UV (uW/c<U+33A1>),	and UVI.
+        These column names are tidied up using the janitor package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: tidyverse, janitor
+RoxygenNote: 6.1.1
+Suggests: testthat
