@@ -2,8 +2,7 @@
 % Please edit documentation in R/data_manipulation.R
 \name{merge_years}
 \alias{merge_years}
-\title{Combine weather data from different years into a tlb, and write it
-out as a CSV file (optional).}
+\title{Consolidate weather data}
 \usage{
 merge_years(years, write_file = FALSE, filename = "all_data.csv")
 }
@@ -22,8 +21,8 @@ A data frame containing weather data from the specified years.
 parameters above)
 }
 \description{
-Combine weather data from different years into a tlb, and write it
-out as a CSV file (optional).
+Combine weather data from different years into a tbl, and optionally
+write it out as a CSV file.
 }
 \examples{
 years <- c(2018,2019)

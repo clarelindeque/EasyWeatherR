@@ -32,6 +32,7 @@ MIT + file LICENSE
 ## Future Work
 
 * Functions to draw wind roses, time series visualisations
+* Experiment with gganimate (eek)
 * Functions to create summary statistics/dashboards
 * Continue to write test cases as development progresses
 * Upload example output files (png images or pdfs)

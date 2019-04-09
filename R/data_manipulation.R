@@ -1,8 +1,10 @@
 library(tidyverse)
 library(janitor)
 
+#' Consolidate weather data
+#'
 #' Combine weather data from different years into a tbl, and optionally
-#'  write it out as a CSV file.
+#' write it out as a CSV file.
 #'
 #' @param years A numeric array
 #' @param write_file A boolean to determine whether to write the merged data
@@ -24,7 +26,7 @@ merge_years <- function(years, write_file=FALSE, filename="all_data.csv") {
     print(y)
     data <- read_csv(paste(y, ".csv", sep="")) %>%
       clean_names() %>% # clean up column names
-      rename_all(funs(str_replace(., "u_00b0", "deg")))  # replace ascii w "deg"
+      rename_all(list(~str_replace(., "u_00b0", "deg")))  # replace ascii w "deg"
 
     # Split "time" column into "date" and "time"
     data <- data %>%
