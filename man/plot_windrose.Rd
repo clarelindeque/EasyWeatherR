@@ -4,18 +4,16 @@
 \alias{plot_windrose}
 \title{Wind rose plot}
 \usage{
-plot_windrose(data, spd, dir, spdres = 2, dirres = 30, spdmin = 2,
-  spdmax = 20, spdseq = NULL, palette = "YlGnBu", countmax = NA,
-  printplot = TRUE)
+plot_windrose(data, speed, direction, spdres = 2, dirres = 30,
+  spdmin = 2, spdmax = 20, spdseq = NULL, palette = "YlGnBu",
+  countmax = NA, printplot = TRUE)
 }
 \arguments{
 \item{data}{A data frame containing wind speed and direction in degrees}
 
-\item{spd}{A numeric vector of wind speed data OR the name of the column
-in the data data frame containing wind speed information}
+\item{speed}{The name of the column in the data frame containing wind speed}
 
-\item{dir}{A numeric vector of wind direction data OR the name of the column
-in the data data frame containing wind direction information}
+\item{direction}{The name of the column in the data frame containing wind direction}
 
 \item{spdres}{Resolution of wind speed bins}
 
@@ -45,5 +43,4 @@ Radar plot code modified from answers to this Stackoverflow question: https://st
 years <- c(2018,2019)
 test_data <- merge_years(years)
 p <- plot_windrose(test_data, "wind_km_h", "wind_direction_deg", dirres = 15)
-p <- plot_windrose(NULL, test_data$wind_km_h, test_data$wind_direction_deg)
 }
